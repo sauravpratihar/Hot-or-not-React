@@ -10,68 +10,76 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" /> 
           <h2>Welcome to Hot OR Not</h2>
-
+           
 
         </div>
-        <Login />
+        {/* <Login /> */}
 
-        <Register />
+        {/* <Register /> */}
       </div>
     );
   }
 }
 
 // Constant Login
-const Login = () =>{
-  return (
-    <div className='login'>
-      <form>
-        <div className="container">
+class Login extends Component {
+  render() {
+    return (
+      <div className='login'>
+        <form>
+          <div className="container">
 
-          <label />Email ID:
-          <input type="text" placeholder="Enter Email ID" name="email" required />
+            <label />Email ID:
+            <input type="text" placeholder="Enter Email ID" name="email" required />
 
-          <label />Password:
-          <input type="password" placeholder="Enter Password" name="password" required />
-                
-          <input type="submit" value="Login" />
+            <label />Password:
+            <input type="password" placeholder="Enter Password" name="password" required />
+                  
+            <input type="submit" value="Login" />
+              
+          </div>
             
-        </div>
-          
-      </form>
-    </div>
-  )
+        </form>
+      </div>
+    )
+  }
 }
 
 // Register
-const Register = () =>{
-  return (
-    <div className='login'>
-      <form>
-        <div className="container">
+class Register extends Component{
+  render(){
+    return (
+      <div className='login'>
+        <form>
+          <div className="container">
 
-          <label />Name:
-          <input type="text" placeholder="Enter Name" name="name" required />
+            <label />Name:
+            <input type="text" placeholder="Enter Name" name="name" required />
 
-          <label />Email ID:
-          <input type="text" placeholder="Enter Email ID" name="email" required />
+            <label />Email ID:
+            <input type="text" placeholder="Enter Email ID" name="email" required />
 
-          <label />Password:
-          <input type="password" placeholder="Enter Password" name="password" required />
+            <label />Password:
+            <input type="password" placeholder="Enter Password" name="password" required />
 
-          <label />Re-Enter Password:
-          <input type="password" placeholder="Enter Password" name="password" required />
-                
-          <input type="submit" value="Register" />
+            <label />Re-Enter Password:
+            <input type="password" placeholder="Enter Password" name="password" required />
+                  
+            <input type="submit" value="Register" />
+              
+          </div>
             
-        </div>
-          
-      </form>
-    </div>
-  )
+        </form>
+      </div>
+    )
+  }
 }
 
 
 
 
-export default App;
+module.exports = {
+  App,
+  Login,
+  Register
+};
